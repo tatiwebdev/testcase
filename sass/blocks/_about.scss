@@ -1,0 +1,10 @@
+.about {
+    height: 200px;
+    background-color: #fff;
+    position: relative;
+    &__modal {
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+    }
+}

@@ -1,0 +1,21 @@
+@import 'base/variables';
+@import 'base/mixins';
+
+* {
+    box-sizing: border-box;
+    @include regular;
+    color: $main-color;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+@import 'base/fonts';
+@import 'blocks/promo';
+@import 'blocks/header';
+@import 'blocks/buttons';
+@import 'blocks/advantages';
+@import 'blocks/about';
+@import 'blocks/modal';

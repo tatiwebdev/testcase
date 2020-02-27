@@ -1,0 +1,21 @@
+.advantages {
+    padding: 156px 0 26px 0;
+    background-color: #000000;
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    &__item {
+        flex-basis: 33%;
+        margin-bottom: 90px;
+        text-align: center;
+    }         
+    &__icon {
+        margin-bottom: 30px;
+    }  
+    &__icon {
+        height: 130px;
+    }
+}
