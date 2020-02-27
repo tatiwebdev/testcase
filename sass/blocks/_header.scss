@@ -31,6 +31,15 @@
             background-color: #8d8d8d;
             cursor: pointer;
         }
+        &_active {
+            &:before {
+                width: 20px;
+            }
+            &:after {
+                width: 20px;
+                right: 45px;
+            } 
+        }
     }
     &__nav {
         margin-top: 17px;
@@ -52,28 +61,33 @@
         margin-right: 40px;
         font-size: 14px;
         font-weight: 400;
+        position: relative;
+        z-index: 1;
         &:last-child {
             margin-right: 0;
         }
-        
         &:hover {
             color: $main-color;
             text-decoration: none;
         }
+        &:active {
+            width: 100px;
+            height: 34px;
+            border-radius: 17px;
+            background-color: #3d6cfb;
+        }   
+    }
+    &__socials {
+        margin-right: 10px;
     }
     &__social {
-        margin-right: 9px;
-        text-decoration: none;
+        margin-right: 7px;
         &:last-child {
             margin-right: 0px;
         }
         &:hover {
             text-decoration: none;
-        }
-        img {
-            &:hover {
-                background: $action-color;
-            }
+            color: $action-color;
         }
     }
     

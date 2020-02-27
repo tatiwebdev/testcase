@@ -7,6 +7,7 @@
     <title>Test</title>
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/iconfont.css">
 </head>
 <body>
   
@@ -31,16 +32,16 @@
           </nav>
           <div class="header__socials">
             <a href="#" class="header__social">
-              <img src="icons/telegram.png" alt="telegram"></a>
+              <span class="icon-telegram"></span>
             </a>
             <a href="#" class="header__social">
-              <img src="icons/viber.png" alt="viber">
+              <span class="icon-viber"></span>
             </a>
             <a href="#" class="header__social">
-              <img src="icons/instagram.png" alt="instagram">
+              <span class="icon-instagram-brands"></span>
             </a>
             <a href="#" class="header__social">
-              <img src="icons/whatsapp.png" alt="whatsapp">
+              <span class="icon-whatsapp"></span>
             </a>
           </div>
         </div>
@@ -56,15 +57,15 @@
   <!-- /.promo -->
 
 <section class="about">
-  <div class="modal modal_about">
-    <h2 class="modal__title">О нашей  компании</h2>
-    <div class="modal__discr">
-      <div class="modal__subtitle">Небольшой
+  <div class="company-info company-info_about">
+    <h2 class="company-info__title">О нашей  компании</h2>
+    <div class="company-info__discr">
+      <div class="company-info__subtitle">Небольшой
         подзаголовок
         о компании</div>
-      <div class="modal__info">
-        <div class="modal__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</div>
-        <hr class="modal__line">
+      <div class="company-info__info">
+        <div class="company-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</div>
+        <hr class="company-info__line">
       </div>
     </div>
   </div>
@@ -113,7 +114,18 @@
     </div>
   </section>
  
-
+  <div class="overlay">
+    <div class="modal" id="consultation">
+      <h2 class="modal__subtitle">Просто заполните форму заявки</h2>
+      <div class="modal__descr">и мы перезвоним вам в течении 10 минут</div>
+      <form class="feed-form" action="#">
+        <input name="name" required placeholder="Ваше имя" type="text">
+        <input name="phone" required placeholder="Ваш телефон">
+        <input name="email" required placeholder="Ваш E-mail" type="email">
+        <button class="button button-form">заказать кОНСУЛЬТАЦИЮ</button>
+      </form>
+      <div class="modal__close">&times;</div>
+    </div>
   
   <script src="js/script.js"></script>
 </body>

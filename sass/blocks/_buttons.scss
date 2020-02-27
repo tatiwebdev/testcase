@@ -11,4 +11,9 @@
     @include black;
     font-size: 14px;
     text-transform: uppercase;
+    &-form {
+        background-color: $main-color;
+        width: 250px;
+        color: $action-color;
+    }
 }
