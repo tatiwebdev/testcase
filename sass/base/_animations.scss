@@ -1,0 +1,5 @@
+@keyframes slide {
+    from {transform: translate(calc(-100vw + 150%), -25%);}
+    50% {transform: translate(calc(100vw - 150%), -25%);}
+    to {transform: translate(0%, -25%);}
+}

@@ -1,68 +1,78 @@
-$(document).ready(function(){
-    
-    $('ul.catalog__tabs').on('click', 'li:not(.catalog__tab_active)', function() {
-      $(this)
-        .addClass('catalog__tab_active').siblings().removeClass('catalog__tab_active')
-        .closest('div.container').find('div.catalog__content').removeClass('catalog__content_active').eq($(this).index()).addClass('catalog__content_active');
+
+window.addEventListener('DOMContentLoaded', () => {
+    const advItemsContainer = document.querySelector('.advantages__items'),
+          advItems = document.querySelectorAll('.advantages__item'),
+          overlay = document.querySelector('.overlay');
+          langSubmenu = document.querySelector('.lang__submenu');
+          langClose = document.querySelector('.lang__close');
+
+
+    // Перемещение элементов
+
+    advItems.forEach(item => {
+        item.addEventListener('click', () => {
+            advItemsContainer.prepend(item);
+        });
     });
 
-    $('.catalog-item__link').each(function(i) {
-      $(this).on('click', function(e) {
-        e.preventDefault();
-        $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
-        $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
-      })
+    // Modal
+
+    document.querySelector('.promo__button').addEventListener('click', () => {
+        overlay.style.display = 'block';
     });
 
-    $('.catalog-item__back').each(function(i) {
-      $(this).on('click', function(e) {
-        e.preventDefault();
-        $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
-        $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
-      })
+    document.querySelector('.modal__close').addEventListener('click', () => {
+        overlay.style.display = '';
     });
 
-    $('[data-modal=consultation]').on('click', function() {
-      $('.overlay, #consultation').fadeIn('slow');
-    });
-
-    $('.modal__close').on('click', function() {
-      $('.overlay, #consultation, #order, #thanks').fadeOut('slow');
-    });
-
-    $('.button_catalog').each(function(i) {
-      $(this).on('click', function(){
-        $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text())
-        $('.overlay, #order').fadeIn('slow');
-      });
-    });
-
-    
-    function validateForms (form) {
-      $(form).validate({
-        rules: {
-          name: "required",
-          phone: "required",
-          email: {
-            required: true,
-            email: true
-          }
-        },
-        messages: {
-          name: "Пожалуйста, введите ваше имя",
-          phone: "Пожалуйста, введите ваш номер телефона",
-          email: {
-            required: "Пожалуйста, введите адрес почтового ящика",
-            email: "Адрес почтового ящика введен неверно"
-          }
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) {
+            overlay.style.display = '';
         }
-      });
-    };
+    });
 
-    validateForms('#order form');
-    validateForms('#consultation-form');
-    validateForms('#consultation form');
+    //выбор языка
 
-    $('input[name=phone]').mask("+7 (999) 999-99-99");
+    document.querySelector('.lang__check').addEventListener('click', () => {
+        langSubmenu.style.display = 'block';
+        langClose.style.display = 'block';
+    });
+    
+    document.querySelector('.lang__close').addEventListener('click', () => {
+        langSubmenu.style.display = '';
+    });
 
-  });
+    // валидация name
+
+    document.querySelectorAll('[name="name"]').forEach(item => {
+        item.addEventListener('input', (e) => {
+            if(e.target.value.length > 32) {
+                e.target.value = e.target.value.substring(0,33);
+            }
+            item.value = item.value.replace(/\d/, '');
+        });
+    });
+
+    
+
+
+    // Checkboxes
+    document.querySelectorAll('[type="checkbox"]').forEach(item => {
+        item.addEventListener('change', () => {
+            document.querySelectorAll('[type="checkbox"]').forEach(checkbox => {
+                checkbox.checked = false;
+            });
+                item.checked = true;
+        });
+    });
+
+    //Маска ввода phone
+    let element = document.getElementById('phone');
+    let maskOptions = {
+        mask: '+7(000)000-00-00',
+        lazy: false
+    } 
+    let mask = new IMask(element, maskOptions);
+
+});
+

@@ -1,50 +1,10 @@
 .header {
-    padding-top: 20px;
-    &__lang {
-        text-align: right;
-        padding-right: 70px;
-        color: #e4e4e4;
-        font-size: 14px;
-        font-weight: 400;
-        position: relative;
-        &:before {
-            content: '';
-            display: block;
-            position: absolute;
-            height: 2px;
-            width: 12px;
-            transform: translateY(3px) rotate(45deg);
-            right: 45px;
-            top: 6px;
-            background-color: #8d8d8d;
-            cursor: pointer;
-        }
-        &:after {
-            content: '';
-            display: block;
-            position: absolute;
-            height: 2px;
-            width: 12px;
-            transform: translateY(3px) rotate(-45deg);
-            right: 37px;
-            top: 6px;
-            background-color: #8d8d8d;
-            cursor: pointer;
-        }
-        &_active {
-            &:before {
-                width: 20px;
-            }
-            &:after {
-                width: 20px;
-                right: 45px;
-            } 
-        }
-    }
+    padding-top: 27px;
     &__nav {
-        margin-top: 17px;
+        margin-top: 14px;
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
     &__logo {
         img {
@@ -73,22 +33,29 @@
         &:active {
             width: 100px;
             height: 34px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             border-radius: 17px;
             background-color: #3d6cfb;
+            transform: translateY(-7px);
         }   
     }
     &__socials {
         margin-right: 10px;
     }
     &__social {
-        margin-right: 7px;
+        margin-right: 5px;
+        font-size: 22px;
         &:last-child {
             margin-right: 0px;
         }
         &:hover {
             text-decoration: none;
+        }
+        span:hover:before{
+            text-decoration: none;
             color: $action-color;
         }
-    }
-    
+    }  
 }
