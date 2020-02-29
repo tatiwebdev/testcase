@@ -5,8 +5,10 @@ window.addEventListener('DOMContentLoaded', () => {
           overlay = document.querySelector('.overlay');
           langSubmenu = document.querySelector('.lang__submenu');
           langClose = document.querySelector('.lang__close');
-
-
+          menu = document.querySelector('.header__menu'),
+        menuItem = document.querySelectorAll('.header__link'),
+        hamburger = document.querySelector('.hamburger');      
+    
     // Перемещение элементов
 
     advItems.forEach(item => {
@@ -53,8 +55,6 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    
-
 
     // Checkboxes
     document.querySelectorAll('[type="checkbox"]').forEach(item => {
@@ -73,6 +73,14 @@ window.addEventListener('DOMContentLoaded', () => {
         lazy: false
     } 
     let mask = new IMask(element, maskOptions);
+
+    //Hamburger 
+   
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('hamburger_active');
+        menu.classList.toggle('header__menu_active');
+    });
+
 
 });
 

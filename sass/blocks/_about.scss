@@ -2,22 +2,17 @@
     height: 200px;
     background-color: #fff;
     position: relative;
-    &__modal {
-        position: absolute;
-        z-index: 1;
-        top: 50%;
-    }
 }
 
 .company-info {
     width: 786px;
-    height: 362px;
+    min-height: 362px;
     border-radius: 20px;
     background-color: $action-color;
-    padding: 60px 70px 129px 56px;
+    padding: 60px 70px 110px 56px;
     margin: 0 auto;
     transform: translateY(-25%);
-    animation: slide 5s linear;
+    animation: slide 2.5s linear;
     &__title {
         font-size: 28px;
         font-weight: 300;
@@ -29,15 +24,11 @@
         display: flex;
     }
     &__subtitle {
-        flex-basis: 45%;
         font-size: 40px;
         font-weight: 700;
         line-height: 36px;
         margin-right: 15px;
         text-align: end;
-    }
-    &__info {
-        flex-basis: 60%;
     }
     &__text {
         font-size: 14px;

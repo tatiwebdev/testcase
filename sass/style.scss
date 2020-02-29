@@ -1,7 +1,10 @@
+@import 'libs/bootstrap-reboot.min';
+@import 'libs/iconfont';
+
 @import 'base/variables';
 @import 'base/mixins';
 @import 'base/animations';
-@import 'base/media';
+@import 'base/fonts';
 
 * {
     box-sizing: border-box;
@@ -14,7 +17,7 @@
     margin: 0 auto;
 }
 
-@import 'base/fonts';
+
 @import 'blocks/promo';
 @import 'blocks/header';
 @import 'blocks/buttons';
@@ -22,3 +25,5 @@
 @import 'blocks/about';
 @import 'blocks/modal';
 @import 'blocks/lang';
+@import 'blocks/media';
+
