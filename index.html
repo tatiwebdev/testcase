@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Test</title>
-    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
-    <link rel="stylesheet" href="css/iconfont.css">
     <link rel="stylesheet" href="css/style.min.css">
     
 </head>
@@ -41,6 +39,11 @@
               <a href="#" class="header__link">Вакансии</a>
               <a href="#" class="header__link">Контакты</a>
           </nav>
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
           <div class="header__socials">
             <a href="#" class="header__social">
               <span class="icon-telegram"></span>
@@ -70,11 +73,11 @@
 
   <section class="about">
     <div class="company-info">
-      <h2 class="company-info__title">О нашей  компании</h2>
+      <div class="company-info__title">О нашей  компании</div>
       <div class="company-info__discr">
-        <div class="company-info__subtitle">Небольшой
+        <h2 class="company-info__subtitle">Небольшой
           подзаголовок
-          о компании</div>
+          о компании</h2>
         <div class="company-info__info">
           <div class="company-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</div>
           <hr class="company-info__line">
@@ -138,22 +141,24 @@
       <div class="modal__descr">и мы перезвоним вам в течении 10 минут</div>
       <form class="feed-form" action="#">
         <input name="name" required placeholder="Ваше имя" type="text">
-        <input name="phone" required placeholder="Ваш телефон" type="text" id="phone">
+        <input type="tel" id="phone" name="phone"
+        pattern="[\+]\d{1}[\(]\d{3}[\)]\d{3}[\-]\d{2}[\-]\d{2}"
+        required>
         <input name="email" required placeholder="Ваш E-mail" type="email">
-        <div class="social">
+        <div class="modal__social">
             <label class="modal__checkbox" for="whatsapp">
                 <input id="whatsapp" type="checkbox">
-                <img src="https://lh3.googleusercontent.com/bYtqbOcTYOlgc6gqZ2rwb8lptHuwlNE75zYJu6Bn076-hTmvd96HH-6v7S0YUAAJXoJN" alt="whatsapp">
+                <img src="icons/whatsapp.svg" alt="whatsapp">
                 Whatsapp
             </label>
             <label class="modal__checkbox" for="viber">
                 <input id="viber" type="checkbox">
-                <img src="https://img.utdstc.com/icons/viber-windows.png:l" alt="whatsapp">
+                <img src="icons/viberr.svg" alt="viber">
                 Viber
             </label>
             <label class="modal__checkbox" for="telegram">
               <input id="telegram" type="checkbox">
-              <img src="https://lh3.googleusercontent.com/bYtqbOcTYOlgc6gqZ2rwb8lptHuwlNE75zYJu6Bn076-hTmvd96HH-6v7S0YUAAJXoJN" alt="whatsapp">
+              <img src="icons/telegramm.svg" alt="telegram">
               Telegram
           </label>
         </div>

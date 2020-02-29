@@ -17,27 +17,18 @@
         &_active {
             background-color: #8d8d8d; 
             position: absolute;
-            left: 68px;
+            left: 70px;
             top: 3px; 
             width: 25px;
             height: 25px;
         }
     }
-    // &_active {
-    //     &:before {
-    //         width: 20px;
-    //     }
-    //     &:after {
-    //         width: 20px;
-    //         right: 45px;
-    //     } 
-    // }
 
     &__submenu {
         display: none;
         position: absolute;
         top: 98%;
-        right: 12px;
+        right: 15px;
         width: 129px;
         height: 255px;
         border-radius: 10px;
@@ -59,5 +50,7 @@
         }
     }
 }
+
+
 
     
